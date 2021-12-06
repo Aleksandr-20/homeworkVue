@@ -1,0 +1,35 @@
+#info-cats {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.cat {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: auto;
+    background-color: rgba(156, 228, 172, 0.897);
+    border: 4px double #6e2565;
+    margin: 10px 10px;
+    padding: 10px 10px 25px;
+    text-align: center;
+}
+
+h3 {
+    color: rgb(190, 95, 11);
+}
+
+.age-cat {
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+.color-cat {
+    font-style: italic;
+}
+
+img {
+    width: 80%;
+    margin: .5rem auto;
+}
