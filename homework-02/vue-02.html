@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Homework № 2 Vue</title>
+	<script src="https://unpkg.com/vue@next"></script>
+	<link rel="stylesheet" href="css/css-vue-02.css">
+</head>
+<body>
+
+	<section id="goods">
+
+		<div class="good" v-for="good in goods"
+			:class="{'many': good.count > 20, 'not-many': good.count < 20 && good.count > 0,'zero': good.count === 0}">
+			<h2>{{ good.title }}</h2>
+			<span class="price">{{ good.price }}</span>
+		</div>
+		<div id="sorting">
+			<p>Отсоритровать по:</p>
+			<button @click="sortedByTitle()">Названию</button>
+			<button @click="sortedByPrice()">Стоимости</button>
+			<button @click="sortedByCount()">Количеству</button>
+		</div>
+
+		<!-- <div>
+			<label for="sortedBy">Отсортировать по: </label>
+			<select id="sortedBy">
+				<option @change="sortByCount()">количеству</option>
+				<option @change="sortedByTitle()">названию</option>
+				<option @change="sortedByPrice()">стоимости</option>
+			</select>
+		</div> -->
+
+
+		<!-- <div>
+			<label for="sortedBy">Отсортировать по: </label>
+			<select id="sortedBy" name="attr" multiple v-model="userChoice.attributes">
+			   <option :value="attr.id" v-for="attr in sortedByAttr">
+				   {{ attr.name }}
+			   </option>
+			</select>
+		</div> -->
+
+	</section>
+
+	<script type="text/javascript" src="js/js-vue-02.js"></script>
+
+</body>
+</html>

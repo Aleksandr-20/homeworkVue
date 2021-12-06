@@ -1,0 +1,37 @@
+#goods {
+    display: block;
+}
+
+.good {
+    width: 50%;
+    height: auto;
+    border: 6px solid #6e2565;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+}
+
+#sorting {
+    text-align: center;
+}
+
+#sorting p {
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    font-variant: small-caps;
+}
+
+#sorting button {
+    color: #fff; 
+    background: rgb(212,75,56);
+    padding: .7rem 1.5rem;
+}
+
+.zero {
+    background-color: rgba(240, 222, 220, 0.897);
+}
+.not-many {
+    background-color: rgba(205, 233, 45, 0.897);
+}
+.many {
+    background-color: rgba(21, 240, 32, 0.897);
+}
