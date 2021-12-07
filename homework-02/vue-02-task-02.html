@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Homework Vue № 2 Task #2</title>
+	<script src="https://unpkg.com/vue@next"></script>
+	<link rel="stylesheet" href="css/css-vue-02-task-02.css">
+</head>
+<body>
+
+	<section id="articles">
+		<div class="switching">
+			<button class="btn-head" @click="showGrid()">Отобразить сеткой</button>
+			<button class="btn-head" @click="showList()">Отобразить списком</button>
+		</div>
+
+		<div id="grid">
+			<span class="article" v-for="article in articles">
+				<img v-bind:src="article.image"
+                     v-bind:alt="article.title">
+			</span>
+		</div>
+
+		<div id="list">
+			<span class="article" v-for="article in articles">
+				<img v-bind:src="article.image"
+                     v-bind:alt="article.title">
+				<h1>{{ article.title.toUpperCase() }}</h1>
+			</span>
+		</div>
+
+		<!-- <div class="container">
+			<span class="article" v-for="article in articles">
+				<img v-bind:src="article.image"
+                     v-bind:alt="article.title">
+				<h1>{{ article.title.toUpperCase() }}</h1>
+			</span>
+		</div> -->
+
+	</section>
+
+	<script type="text/javascript" src="js/js-vue-02-task-02.js"></script>
+
+</body>
+</html>
