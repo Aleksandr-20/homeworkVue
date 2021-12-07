@@ -11,15 +11,17 @@
 	<section id="goods">
 
 		<div class="good" v-for="good in goods"
-			:class="{'many': good.count > 20, 'not-many': good.count < 20 && good.count > 0,'zero': good.count === 0}">
+			:class="{'many': good.count > 20,
+			         'not-many': good.count < 20 && good.count > 0,
+					 'zero': good.count === 0}">
 			<h2>{{ good.title }}</h2>
 			<span class="price">{{ good.price }}</span>
 		</div>
 		<div id="sorting">
 			<p>Отсоритровать по:</p>
-			<button @click="sortedByTitle()">Названию</button>
-			<button @click="sortedByPrice()">Стоимости</button>
-			<button @click="sortedByCount()">Количеству</button>
+			<button @click="sortedByTitle">Названию</button>
+			<button @click="sortedByPrice">Стоимости</button>
+			<button @click="sortedByCount">Количеству</button>
 		</div>
 
 		<!-- <div>
