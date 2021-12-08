@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Homework № 3 Vue Task #1</title>
+	<script src="https://unpkg.com/vue@next"></script>
+	<link rel="stylesheet" href="css/css-vue-03-task-01.css">
+</head>
+<body>
+
+	<section id="searching">
+
+		<form>
+			<input placeholder="Искать здесь..." type="search" v-model="keywords">
+			<!-- <button type="submit" @click="">Поиск</button> -->
+		</form>
+
+		<article v-for="article in searchArticles">
+			<img v-bind:src="article.image"
+                     v-bind:alt="article.title">
+			<h5>{{ article.title }}</h5>
+		</article>
+
+	</section>
+
+	<script type="text/javascript" src="js/js-vue-03-task-01.js"></script>
+
+</body>
+</html>
