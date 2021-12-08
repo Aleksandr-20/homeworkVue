@@ -28,17 +28,10 @@ let articles =  [
  ];
 
 Vue.createApp({
-    data() {
-        return {
-            articles
-        }
-    },
-    methods: {
-        showGrid(){
-            document.getElementById('list').hidden = true;
-        },
-        showList(){
-            document.getElementById('grid').hidden = true;
-        }
-    }
+   data() {
+      return {
+         articles,
+         className: "grid"
+      }
+   }
 }).mount("#articles");

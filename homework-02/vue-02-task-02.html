@@ -10,31 +10,16 @@
 
 	<section id="articles">
 		<div class="switching">
-			<button class="btn-head" @click="showGrid()">Отобразить сеткой</button>
-			<button class="btn-head" @click="showList()">Отобразить списком</button>
+			<button class="btn-head" v-on:click="className = 'grid'">Отобразить сеткой</button>
+			<button class="btn-head" v-on:click="className = 'list'">Отобразить списком</button>
 		</div>
 
-		<!-- <div id="grid">
-			<span class="article" v-for="article in articles">
-				<img v-bind:src="article.image"
-                     v-bind:alt="article.title">
-			</span>
-		</div>
-
-		<div id="list">
-			<span class="article" v-for="article in articles">
+		<div v-bind:class="className">
+			<article v-for="article in articles">
 				<img v-bind:src="article.image"
                      v-bind:alt="article.title">
 				<h1>{{ article.title.toUpperCase() }}</h1>
-			</span>
-		</div> -->
-
-		<div class="container">
-			<span class="article" v-for="article in articles">
-				<img v-bind:src="article.image"
-                     v-bind:alt="article.title">
-				<h1>{{ article.title.toUpperCase() }}</h1>
-			</span>
+			</article>
 		</div>
 
 	</section>
