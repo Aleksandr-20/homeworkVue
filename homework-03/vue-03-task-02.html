@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Homework № 3 Vue Task #2</title>
+	<script src="https://unpkg.com/vue@next"></script>
+	<link rel="stylesheet" href="css/css-vue-03-task-02.css">
+</head>
+<body>
+
+	<section id="app">
+
+		<div v-for="(service, index) in sortedByPrice">
+			<input type="checkbox" :id="index" :value="index" v-model="selectedServices">
+            <label :for="index">{{ service.title }} ({{ service.price }})</label>
+		</div>
+
+		<p>Окончательная стоимость: {{ totalCost }}</p>
+
+	</section>
+
+	<script type="text/javascript" src="js/js-vue-03-task-02.js"></script>
+
+</body>
+</html>
